@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: dev
+
+server:
+  port: 8080
+  servlet:
+    context-path: /print
+
+---
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@192.168.90.110:1521/ORCL
+    username: EDW_DATA_EDA
+    password: LINKCLD_EDA
+
+---
+spring:
+  profiles: pro
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@192.168.90.110:1521/ORCL
+    username: EDW_DATA_EDA
+    password: LINKCLD_EDA
